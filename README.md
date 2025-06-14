@@ -1,1 +1,2 @@
-# StaticWebsitetoS3
+-Uses Github to deploy to AWS
+-Uses GitHub Secrets to store AWS credentials
