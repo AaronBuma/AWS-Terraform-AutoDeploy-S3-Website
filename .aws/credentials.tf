@@ -1,0 +1,3 @@
+[s3credentials]
+aws_access_key_id = AKIAS75TRG6JYUMLTAGJ
+aws_secret_access_key = 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
