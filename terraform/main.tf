@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-2"  # change to your preferred region
-  #shared_credentials_files = [".aws/credentials"]
-  #profile = "s3credentials"
+  region = "us-east-2"  
 }
 
 resource "aws_s3_bucket" "static_site_bucket" {
   bucket = "s3-bucket-website-aaronbuma"
+
+  force_destroy = true
   
   # Enable static website hosting
   website {
