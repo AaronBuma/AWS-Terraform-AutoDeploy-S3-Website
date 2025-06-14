@@ -2,14 +2,8 @@ provider "aws" {
   region = "us-east-2"  # change to your preferred region
 }
 
-resource "aws_s3_bucket" "website" {
+resource "aws_s3_bucket" "static_site_bucket" {
   bucket = "s3-bucket-website-aaronbuma"
-
-  # Enable static website hosting
-  website {
-    index_document = "index.html"
-    error_document = "error.html"
-  }
 
   # Block all public access (we'll use bucket policy for public read)
   #block_public_acls       = false
@@ -19,6 +13,12 @@ resource "aws_s3_bucket" "website" {
   
   # Allows public access to the bucket
   acl    = "public-read" 
+  
+  # Enable static website hosting
+  website {
+    index_document = "index.html"
+    error_document = "error.html"
+  }
 }
 
 resource "aws_s3_bucket_policy" "static_site_bucket_policy" {
