@@ -12,24 +12,29 @@ resource "aws_s3_bucket" "website" {
   }
 
   # Block all public access (we'll use bucket policy for public read)
-  block_public_acls       = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
+  #block_public_acls       = false
+  #block_public_policy     = false
+  #ignore_public_acls      = false
+  #restrict_public_buckets = false
+  
+  # Allows public access to the bucket
+  acl    = "public-read" 
 }
 
-resource "aws_s3_bucket_policy" "website_policy" {
-  bucket = aws_s3_bucket.website.id
+resource "aws_s3_bucket_policy" "static_site_bucket_policy" {
+  bucket = aws_s3_bucket.static_site_bucket.id
 
   policy = jsonencode({
     Version = "2012-10-17",
-    Statement = [{
-      Sid       = "PublicReadGetObject",
-      Effect    = "Allow",
-      Principal = "*",
-      Action    = ["s3:GetObject"],
-      Resource  = "${aws_s3_bucket.website.arn}/*"
-    }]
+    Statement = [
+      {
+        Sid       = "PublicReadGetObject",
+        Effect    = "Allow",
+        Principal = "*",
+        Action    = "s3:GetObject",
+        Resource  = "${aws_s3_bucket.static_site_bucket.arn}/*"
+      }
+    ]
   })
 }
 
