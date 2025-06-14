@@ -39,11 +39,11 @@ resource "aws_s3_bucket_policy" "static_site_bucket_policy" {
 }
 
 output "bucket_name" {
-  value       = aws_s3_bucket.website.bucket
+  value       = aws_s3_bucket.static_site_bucket.bucket
   description = "The name of the S3 bucket"
 }
 
 output "website_url" {
-  value       = aws_s3_bucket.website.website_endpoint
+  value       = aws_s3_bucket.static_site_bucket.website_endpoint
   description = "The public URL of the static website"
 }
