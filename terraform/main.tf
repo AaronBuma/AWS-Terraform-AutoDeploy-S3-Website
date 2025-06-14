@@ -1,6 +1,6 @@
 provider "aws" {
   region = "us-east-2"  # change to your preferred region
-  shared_credentials_file = ".aws/credentials"
+  shared_credentials_files = ".aws/credentials"
   profile = "s3credentials"
 }
 
