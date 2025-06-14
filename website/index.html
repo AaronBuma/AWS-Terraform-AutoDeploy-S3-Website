@@ -1,55 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aaron Buma - Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      margin-bottom: 0.2rem;
+      color: #222;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+    h3 { font-size: 1.1rem; font-weight: normal; color: #555; }
+    ul { padding-left: 1.2rem; }
+    .section { margin-bottom: 2rem; }
+    .title-line {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+    }
+    .job-title { font-weight: bold; }
+    .location-date { color: #777; font-size: 0.9rem; }
+    .skills span {
+      background: #eee;
+      margin: 0.2rem;
+      display: inline-block;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AWS Made Easy</h1>
-    </header>
- 
-    <main>
-        <h2>Welcome to AWS Made Easy Version 2</h2>
-        <img src="mylogo.jpg" alt="image1">
-        <p>AWS Made Easy is a channel dedicated to bring quality tutorials with a crisp explaination of the concepts and step by step Hands-on demo.
-            If you are just begining to learn AWS or If you are looking to enhance your AWS Skills to next level or If you are looking for a solution for a particular problem on AWS, This channel caters to everyone.</p>
-    </main>
+  <div class="container">
+    <h1>Aaron Buma</h1>
+    <h3>Cloud Engineering Database Manager | SQL & Azure Expert | FinOps Certified</h3>
+    <p>Email: you@example.com | LinkedIn: linkedin.com/in/aaronbuma | Location: Washington State, USA</p>
 
-    <footer>
-        <p>&copy; 2024 AWS Made Easy. All rights reserved.</p>
-    </footer>
+    <div class="section">
+      <h2>Summary</h2>
+      <p>
+        14+ years of experience spanning database administration, cloud architecture, engineering leadership, and FinOps. Passionate about SQL performance tuning, cost-efficient cloud design, and cross-functional collaboration from C-suite to junior developers. Proven record of driving millions in Azure savings while modernizing infrastructure and automating at scale.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>SQL Server</span><span>Azure PaaS</span><span>FinOps</span><span>Performance Tuning</span>
+        <span>Infrastructure as Code</span><span>Azure Cost Management</span><span>PowerShell</span><span>Leadership</span>
+        <span>DevOps</span><span>CI/CD</span><span>Cloud Migrations</span><span>ETL</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+
+      <div>
+        <div class="title-line">
+          <span class="job-title">Cloud Engineering Database Manager – ESO</span>
+          <span class="location-date">2020 – 2024 | Remote</span>
+        </div>
+        <ul>
+          <li>Led global database operations and FinOps program, achieving multi-million dollar Azure savings.</li>
+          <li>Managed a team of DBAs supporting 6,000+ multi-tenant SQL databases across Azure and datacenter VMs.</li>
+          <li>Implemented cloud-native ETL and warehouse in ADF + Azure SQL MI, replacing costly legacy SSIS.</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="title-line">
+          <span class="job-title">Development DBA & DevOps Manager – Emergency Reporting</span>
+          <span class="location-date">2013 – 2020 | Bellingham, WA</span>
+        </div>
+        <ul>
+          <li>Owned SQL performance and stability across SaaS platform, reducing average query times by over 70%.</li>
+          <li>Built foundational IaC pipelines, implemented cost-saving database strategies, and supported developers directly.</li>
+          <li>Started as software engineer and evolved into cross-functional infrastructure leadership role.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li>BA in Management Information Systems – Western Washington University</li>
+        <li>FinOps Certified Practitioner</li>
+        <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+        <li>ITIL Foundation Certified</li>
+        <li>Agile Product Owner Certified</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
