@@ -4,8 +4,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "static_site_bucket" {
   bucket = "s3-bucket-website-aaronbuma"
-  force_destroy = true
-  terraform destroy
+  force_destroy = true 
   
   # Enable static website hosting
   website {
