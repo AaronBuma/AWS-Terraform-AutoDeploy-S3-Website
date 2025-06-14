@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-2"  # change to your preferred region
   #shared_credentials_files = [".aws/credentials"]
-  profile = "s3credentials"
+  #profile = "s3credentials"
 }
 
 resource "aws_s3_bucket" "static_site_bucket" {
