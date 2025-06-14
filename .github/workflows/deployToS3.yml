@@ -29,6 +29,13 @@ jobs:
       working-directory: ./terraform
       run: terraform init
 
+      
+    - name: Terraform Import Existing Bucket (one-time)
+      working-directory: ./terraform
+      run: |
+        terraform import aws_s3_bucket.static_site_bucket s3-bucket-website-aaronbuma || echo "Bucket already imported or failed"
+
+
     - name: Terraform Apply (auto approve)
       working-directory: ./terraform     
       run: terraform apply -auto-approve
